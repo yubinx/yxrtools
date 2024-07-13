@@ -1,12 +1,10 @@
-#' concat_csv Function
+#' anthro_cdf Function
 #'
 #' This function plots anthropometric measurement in cdf
 #' @param list of paths to the csv files
 #' @keywords concatenate
 #' @examples
-#' filenames <- list.files(path = path, pattern="df_individual", recursive=T,full.names = T)
-#' df<-concat_csv(filenames)
-#' fwrite(df, paste0(path,"/", "df_master.csv"))
+
 
 
 #   Install Package:           'Cmd + Shift + B'
@@ -32,7 +30,8 @@ anthro_cdf <- function(df, measurement){
     theme(
       axis.title.x = element_text(size = 10),
       axis.title.y = element_text(size = 10),
-      axis.text = element_text(size = 10)
+      axis.text.x = element_text(size = 10),
+      axis.text.y = element_text(size = 10)
     )
   return(p)
 }
