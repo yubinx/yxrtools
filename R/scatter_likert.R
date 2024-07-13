@@ -20,8 +20,8 @@ scatter_likert <- function(df, measure_x, measure_y, rating_key, device,
     aes(
       x = measure_x,
       y = measure_y,
-      color = RatingValue,
-      label = PID
+      color = RatingValue
+      # label = PID
     )
   ) +
     geom_point()+
