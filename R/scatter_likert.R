@@ -15,8 +15,9 @@ scatter_likert <- function(df, measure_x, measure_y, rating_key, device,
                            ystep=5,
                            ymax=200
                            ){
+  dfplot <- df %>% filter(RatingKey == rating_key) %>% filter(Device %in% c(device))
   p <- ggplot2::ggplot(
-    data = df %>% filter(RatingKey == rating_key) %>% filter(Device %in% c(device)),
+    data = dfplot,
     aes(
       x = measure_x,
       y = measure_y,
