@@ -13,7 +13,7 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-concat_csv <- function(df, measurement){
+anthro_cdf <- function(df, measurement){
   p <- ggplot2::ggplot() +
     stat_ecdf(
       data = df,
